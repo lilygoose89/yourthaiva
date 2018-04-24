@@ -2,24 +2,52 @@
 layout: default
 title: Your Thai VA
 description: Your Thai Virtual Assistant - Local help for your peace of mind
+headshot_image: /images/PangWichiantiab.jpg
+testimonials:
+  - quote: >-
+      Having somebody I can rely on when I've got too much on my plate helps me to focus on what I do best - provising great service to my own clients. I know I can trust Pang to take of the day to day work that would otherwise overwhelm my focus. I'm lucky to have stumbled upon somebody so thoughtful and professional.
+    headline: Pang has been a huge help to my business!
+    client: Lily Bruns, Chiang Mai
+    testimonials_image: /images/lilyb&w.jpg
+  - quote: >-
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat.
+    client: Happy Client 2
+    testimonials_image: /images/lilyb&w.jpg
+  - quote: >-
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat.
+    client: Happy Client 3
+    testimonials_image: /images/lilyb&w.jpg
+  - quote: >-
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat.
+    client: Happy Client 4
+    testimonials_image: /images/lilyb&w.jpg
 ---
 <header id="header" class="bg-header pad-section text-center pad-all-m">
-  <h2 class="text-white">Local help for your peace of mind</h2>
+  <h2 class="text-white pad-all-s pad-top-m">Local help for your peace of mind</h2>
   <p class="text-white pad-bottom-xs">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
   </p>
-  <div>
-    <a href="/#contact"><button>Hire Me</button></a>
-    <a href="/#about"><button>Learn More</button></a>
+  <div class="pad-all-s">
+    <a href="/#contact"><button class="button-left">Hire Me</button></a>
+    <a href="/#about"><button class="button-right">Learn More</button></a>
   </div>
 </header>
 <section id="about" class="pad-section">
   <div class="grid pad-top-m pad-bottom-s">
     <div class="col-6 text-right">
-      <img src="/images/PangWichiantiab.jpg" alt="Pang Wichiantiab - Headshot" class="pang"/>
+      <img src="{{page.headshot_image}}" alt="Pang Wichiantiab - Headshot" class="pang"/>
     </div>
     <div class="col-6">
-      <h2>About Me</h2>
+      <h2 class="pad-bottom-xs">About Me</h2>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       </p>
@@ -27,33 +55,80 @@ description: Your Thai Virtual Assistant - Local help for your peace of mind
   </div>
 </section>
 <section id="services" class="bg-grey pad-section">
-  <h2 class="text-center pad-top-m">Services</h2>
-  <div class="grid-center pad-bottom-m">
+  <h2 class="text-center pad-top-m pad-bottom-xs">Services</h2>
+  <div class="grid-center">
     <div class="col-4 margin-all-xs bg-trans services">
-      <h3>Translation & Interpretation</h3>
+      <h4>Translation & Interpretation</h4>
     </div>
     <div class="col-4 margin-all-xs bg-admin services">
-      <h3>Administration</h3>
+      <h4>Administration</h4>
     </div>
     <div class="col-4 margin-all-xs bg-setup services">
-      <h3>Business Setup</h3>
+      <h4>Business Setup</h4>
     </div>
     <div class="col-4 margin-all-xs bg-sm services">
-      <h3>Social Media Management</h3>
+      <h4>Social Media Management</h4>
     </div>
   </div>
+  <div class="text-center pad-bottom-m grid-center">
+    <h3 class="col-12 pad-top-xs">And much more!</h3>
+    <p class="col-6">
+      Get in touch today to find out how I can help you save time and gain peace of mind knowing you have a reliable partner keeping an eye on your business.
+    </p>
+    <a class="col-12" href="/#contact"><button class="button-main">Send Me a Message</button></a>
+  </div>
 </section>
-<section id="references" class="text-center pad-all-m">
-  References
+<section id="references" class="pad-top-s pad-section">
+  <h2 class="text-center">References</h2>
+   <!-- this is the container for the testimonials which should cycle through like a gallery -->
+   <div class="grid-middle">
+     <div class="col-1">
+       <!-- this is the button or icon to click left to see previous testimonial -->
+       <a id="flex-left" href="#"><i class=" fa fa-angle-left nudge-left" aria-hidden="true"></i></a>
+     </div>
+     <div id="testimonial" class="col-10">
+       <!-- these are the testimonial itself -->
+       <div class="flexslider">
+         <ul class="slides">
+         {% for testimonials in page.testimonials %}
+           <li>
+             <div class="grid-center">
+               <h3 class="col-12 text-center"><span class="text-purple quote">"</span>{{testimonials.headline}}</h3>
+               <div class="container-right col-3_sm-12">
+                 <img class="testimonials-image" src="{{testimonials.testimonials_image}}" alt="client testimonial image - {{testimonials.client}}"/>
+               </div>
+               <div class="col-8_sm-12">
+                 <blockquote>{{testimonials.quote}}</blockquote>
+                 <h6 class="text-right pad-top-xs">- {{testimonials.client}}</h6>
+               </div>
+             </div>
+           </li>
+         {% endfor %}
+         </ul>
+          <!-- .slides -->
+       </div>
+         <!-- .flexslider -->
+     </div>
+     <div class="col-1 text-right">
+       <!-- this is the button or icon to click right to see next testimonial -->
+       <a id="flex-right" href="#"><i class="fa fa-angle-right nudge-right" aria-hidden="true"></i></a>
+     </div>
+     <div class="text-center pad-bottom-m">
+       <h4 class="pad-bottom-xs">Read other reviews and connect with me on…</h4>
+       <div class="grid-center">
+         <a class="col-3" href="https://th.linkedin.com/in/pang-wichiantiab-0739a7131" target=blank><img src="/images/linkedin.png" alt="linked in logo"/></a>
+       </div>
+     </div>
+   </div>
 </section>
 <section id="contact" class="bg-contact grid-center">
-  <div class="col-6 pad-all-s">
-    <h2 class="text-pink text-center">Contact</h2>
+  <div class="col-6 pad-all-s pad-bottom-m">
+    <h2 class="text-pink text-center pad-top-s pad-bottom-s">Contact</h2>
     <form method="POST" action="https://formspree.io/YOUREMAILHERE">
       <input type="name" name="name" placeholder="Your Name">
       <input type="email" name="email" placeholder="Your email">
       <textarea name="message" placeholder="Your message"></textarea>
-      <button type="submit">Send</button>
+      <button type="submit" class="button-contact">Send</button>
     </form>
   </div>
 

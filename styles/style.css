@@ -1,10 +1,10 @@
 /* universal styles ----------------------------------------- */
 * {
   box-sizing: border-box;
-  /* padding: 0;
-  margin: 0; */
+  padding: 0;
+  margin: 0;
   font-family: 'Old Standard TT', serif;
-  /* border: solid 0.25px powderblue; */
+  border: solid 0.25px powderblue;
 }
 img {
   max-width: 100%;
@@ -36,17 +36,26 @@ h1,h2 {
   color: #ef767a;
   font-size: 2em;
 }
-h3,h4,h5 {
+h3 {
   font-family: 'Oswald', sans-serif;
   font-weight: 300;
-  color: white;
+  font-size: 1.8em;
+  color: #ef767a;
+}
+h4 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+}
+h5 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
 }
 h6 {
   font-family: 'Oswald', sans-serif;
   font-weight: 200;
-  color: #3F4041;
+  font-size: 1em;
 }
-p {
+p,li {
   color: #3F4041;
 }
 header h2 {
@@ -67,8 +76,35 @@ header p {
 .text-pink {
   color: #ef767a;
 }
+.text-purple {
+  color: #3a426d;
+}
 /* button styles ----------------------------------------- */
-
+button {
+  background-color: #ef767a;
+  border: solid #ef767a 1px;
+  color: white;
+  padding: 1.2%;
+  font-size: 1.2em;
+  font-family: 'Oswald', sans-serif;
+}
+.button-main {
+  border-radius: 45px;
+  padding: 1% 3%;
+}
+.button-left {
+  width: 180px;
+  border-radius: 45px 0 0 45px;
+}
+.button-right {
+  width: 180px;
+  border-radius: 0 45px 45px 0;
+}
+.button-contact {
+  width: 100%;
+  padding: 1.5%;
+  border-radius: 45px;
+}
 /* container styles ----------------------------------------- */
 .bg-header {
   background: linear-gradient(rgba(58,66,109,0.7), rgba(58,66,109,0.7)), url('/images/laptopondesk.jpg');
@@ -104,7 +140,8 @@ header p {
   height: 200px;
   font-size: 1.8em;
   text-align: center;
-  padding: 3%;
+  padding: 6%;
+  color: white;
 }
 .bg-contact {
   background: linear-gradient(rgba(58,66,109,0.7), rgba(58,66,109,0.7)), url('/images/contact.jpg');
@@ -136,12 +173,25 @@ nav a {
 nav a:hover {
   transform: scale(1.1);
 }
-/* footer styles ----------------------------------------- */
-
 /* homepage styles ----------------------------------------- */
 .pang {
   height: 400px;
   width: auto;
+}
+.quote {
+  font-family: 'Oswald', sans-serif;
+  font-size: 6em;
+  position: relative;
+  top: 80px;
+  left: -10px;
+  line-height: 0.5;
+}
+.testimonials-image {
+  border-radius: 100%;
+}
+#flex-left,#flex-right {
+  font-size: 3em;
+  color: #3F4041;
 }
 /* form styles ----------------------------------------- */
 #contact input[type="name"],
@@ -178,6 +228,23 @@ nav a:hover {
   border: 1px solid #aaa;
   font-family: 'Old Standard TT', serif;
   color: #757679;
+}
+/* footer styles ----------------------------------------- */
+footer p {
+  font-family: 'Oswald', sans-serif;
+  color: #757679;
+}
+.icon-large {
+  font-size: 2em;
+  color: #757679;
+}
+footer a {
+  text-decoration: none;
+  color: #757679;
+  font-family: inherit;
+}
+footer a:hover {
+  transform: scale(1.1);
 }
 /* helpers ----------------------------------------- */
 
@@ -246,64 +313,64 @@ nav a:hover {
   padding-left: 20%;
 }
 .margin-all-xs {
-  margin: 1%
+  margin: 1%;
 }
 .margin-all-s {
-  margin: 5%
+  margin: 5%;
 }
 .margin-all-m {
-  margin: 10%
+  margin: 10%;
 }
 .margin-all-l {
-  margin: 20%
+  margin: 20%;
 }
 .margin-top-xs {
-  margin-top: 1%
+  margin-top: 1%;
 }
 .margin-top-s {
-  margin-top: 5%
+  margin-top: 5%;
 }
 .margin-top-m {
-  margin-top: 10%
+  margin-top: 10%;
 }
 .margin-top-l {
-  margin-top: 20%
+  margin-top: 20%;
 }
 .margin-right-xs {
-  margin-right: 1%
+  margin-right: 1%;
 }
 .margin-right-s {
-  margin-right: 5%
+  margin-right: 5%;
 }
 .margin-right-m {
-  margin-right: 10%
+  margin-right: 10%;
 }
 .margin-right-l {
-  margin-right: 20%
+  margin-right: 20%;
 }
 .margin-bottom-xs {
-  margin-bottom: 1%
+  margin-bottom: 1%;
 }
 .margin-bottom-s {
-  margin-bottom: 5%
+  margin-bottom: 5%;
 }
 .margin-bottom-m {
-  margin-bottom: 10%
+  margin-bottom: 10%;
 }
 .margin-bottom-l {
-  margin-bottom: 20%
+  margin-bottom: 20%;
 }
 .margin-left-xs {
-  margin-left: 1%
+  margin-left: 1%;
 }
 .margin-left-s {
-  margin-left: 5%
+  margin-left: 5%;
 }
 .margin-left-m {
-  margin-left: 10%
+  margin-left: 10%;
 }
 .margin-left-l {
-  margin-left: 20%
+  margin-left: 20%;
 }
 /* POSITION */
 .position-rel {
