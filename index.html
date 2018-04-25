@@ -3,6 +3,19 @@ layout: default
 title: Your Thai VA
 description: Your Thai Virtual Assistant - Local help for your peace of mind
 headshot_image: /images/PangWichiantiab.jpg
+services:
+  - bg: bg-trans
+    name: Translation & Interpretation
+    description: >-
+  - bg: bg-admin
+    name: Administration
+    description: >-
+  - bg: bg-setup
+    name: Business Setup
+    description: >-
+  - bg: bg-sm
+    name: Social Media Management
+    description: >-
 testimonials:
   - quote: >-
       Having somebody I can rely on when I've got too much on my plate helps me to focus on what I do best - provising great service to my own clients. I know I can trust Pang to take of the day to day work that would otherwise overwhelm my focus. I'm lucky to have stumbled upon somebody so thoughtful and professional.
@@ -32,21 +45,24 @@ testimonials:
     testimonials_image: /images/lilyb&w.jpg
 ---
 <header id="header" class="bg-header pad-section text-center pad-all-m">
+  <div class="mobile-logo-container">
+    <img src="/images/yourthaiva-logo.png" alt="your thai va logo" class="logo"/>
+  </div>
   <h2 class="text-white pad-all-s pad-top-m">Local help for your peace of mind</h2>
   <p class="text-white pad-bottom-xs">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
   </p>
-  <div class="pad-all-s">
+  <div class="pad-all-xs">
     <a href="/#contact"><button class="button-left">Hire Me</button></a>
-    <a href="/#about"><button class="button-right">Learn More</button></a>
+    <a href="/#services"><button class="button-right">Learn More</button></a>
   </div>
 </header>
-<section id="about" class="pad-section">
+<section id="about" class="pad-section text-center-mobile">
   <div class="grid pad-top-m pad-bottom-s">
-    <div class="col-6 text-right">
-      <img src="{{page.headshot_image}}" alt="Pang Wichiantiab - Headshot" class="pang"/>
+    <div class="col-6_sm-12 text-right text-center-mobile pang">
+      <img src="{{page.headshot_image}}" alt="Pang Wichiantiab - Headshot"/>
     </div>
-    <div class="col-6">
+    <div class="col-6_sm-12">
       <h2 class="pad-bottom-xs">About Me</h2>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -57,22 +73,31 @@ testimonials:
 <section id="services" class="bg-grey pad-section">
   <h2 class="text-center pad-top-m pad-bottom-xs">Services</h2>
   <div class="grid-center">
-    <div class="col-4 margin-all-xs bg-trans services">
-      <h4>Translation & Interpretation</h4>
+    {% for services in page.services%}
+    <div class="col-4_sm-12 margin-all-xs {{services.bg}} services grid-middle-center-noGutter">
+      <div class="col-12">
+        <h4 class="pad-bottom-xs">{{services.name}}</h4>
+        <button class="button-service">Learn More</button>
+      </div>
     </div>
-    <div class="col-4 margin-all-xs bg-admin services">
-      <h4>Administration</h4>
-    </div>
-    <div class="col-4 margin-all-xs bg-setup services">
-      <h4>Business Setup</h4>
-    </div>
-    <div class="col-4 margin-all-xs bg-sm services">
-      <h4>Social Media Management</h4>
-    </div>
+    <!-- copied over pop-up -->
+    <!-- <div>
+      <div class="pop-up">
+        <span>x</span>
+          <div class="pop-up-text">
+            <h1>Heading 1</h1>
+            <p>Some sample pop-up text.</p>
+            <img src="https://images.unsplash.com/photo-1474244707578-17999c7d3fc4"/>
+          </div>
+        </div>
+      <div class="pop-up-container">
+      </div>
+    </div> -->
+    {% endfor%}
   </div>
   <div class="text-center pad-bottom-m grid-center">
     <h3 class="col-12 pad-top-xs">And much more!</h3>
-    <p class="col-6">
+    <p class="col-6_sm-12">
       Get in touch today to find out how I can help you save time and gain peace of mind knowing you have a reliable partner keeping an eye on your business.
     </p>
     <a class="col-12" href="/#contact"><button class="button-main">Send Me a Message</button></a>
@@ -94,7 +119,7 @@ testimonials:
            <li>
              <div class="grid-center">
                <h3 class="col-12 text-center"><span class="text-purple quote">"</span>{{testimonials.headline}}</h3>
-               <div class="container-right col-3_sm-12">
+               <div class="col-3_sm-12 text-center">
                  <img class="testimonials-image" src="{{testimonials.testimonials_image}}" alt="client testimonial image - {{testimonials.client}}"/>
                </div>
                <div class="col-8_sm-12">
@@ -114,15 +139,15 @@ testimonials:
        <a id="flex-right" href="#"><i class="fa fa-angle-right nudge-right" aria-hidden="true"></i></a>
      </div>
      <div class="text-center pad-bottom-m">
-       <h4 class="pad-bottom-xs">Read other reviews and connect with me on…</h4>
+       <h4 class="pad-bottom-xs">Read other reviews and connect with Your Thai VA on…</h4>
        <div class="grid-center">
          <a class="col-3" href="https://th.linkedin.com/in/pang-wichiantiab-0739a7131" target=blank><img src="/images/linkedin.png" alt="linked in logo"/></a>
        </div>
      </div>
    </div>
 </section>
-<section id="contact" class="bg-contact grid-center">
-  <div class="col-6 pad-all-s pad-bottom-m">
+<section id="contact" class="bg-contact grid-center" stlye="height: 70vh;">
+  <div class="col-6_sm-8 pad-bottom-m">
     <h2 class="text-pink text-center pad-top-s pad-bottom-s">Contact</h2>
     <form method="POST" action="https://formspree.io/YOUREMAILHERE">
       <input type="name" name="name" placeholder="Your Name">
