@@ -48,13 +48,13 @@ testimonials:
   <div class="mobile-logo-container">
     <img src="/images/yourthaiva-logo.png" alt="your thai va logo" class="logo"/>
   </div>
-  <h2 class="text-white pad-all-s pad-top-m">Local help for your peace of mind</h2>
-  <p class="text-white pad-bottom-xs">
+  <h2 class="text-white pad-all-s pad-top-m editable">Local help for your peace of mind</h2>
+  <p class="text-white pad-bottom-xs editable">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
   </p>
   <div class="pad-all-xs">
-    <a href="/#contact"><button class="button-left">Hire Me</button></a>
-    <a href="/#services"><button class="button-right">Learn More</button></a>
+    <a href="/#contact"><button class="button-left"><span class="editable">Hire Me</span></button></a>
+    <a href="/#services"><button class="button-right"><span class="editable">Learn More</span></button></a>
   </div>
 </header>
 <section id="about" class="pad-section text-center-mobile">
@@ -63,15 +63,15 @@ testimonials:
       <img src="{{page.headshot_image}}" alt="Pang Wichiantiab - Headshot"/>
     </div>
     <div class="col-6_sm-12">
-      <h2 class="pad-bottom-xs">About Me</h2>
-      <p>
+      <h2 class="pad-bottom-xs editable">About Me</h2>
+      <p class="editable">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       </p>
     </div>
   </div>
 </section>
 <section id="services" class="bg-grey pad-section">
-  <h2 class="text-center pad-top-m pad-bottom-xs">Services</h2>
+  <h2 class="text-center pad-top-m pad-bottom-xs editable">Services</h2>
   <div class="grid-center">
     {% for services in page.services%}
     <div class="col-4_sm-12 margin-all-xs {{services.bg}} services grid-middle-center-noGutter">
@@ -96,15 +96,15 @@ testimonials:
     {% endfor%}
   </div>
   <div class="text-center pad-bottom-m grid-center">
-    <h3 class="col-12 pad-top-xs">And much more!</h3>
-    <p class="col-6_sm-12">
+    <h3 class="col-12 pad-top-xs editable">And much more!</h3>
+    <p class="col-6_sm-12 editable">
       Get in touch today to find out how I can help you save time and gain peace of mind knowing you have a reliable partner keeping an eye on your business.
     </p>
-    <a class="col-12" href="/#contact"><button class="button-main">Send Me a Message</button></a>
+    <a class="col-12" href="/#contact"><button class="button-main"><span class="editable">Send Me a Message</span></button></a>
   </div>
 </section>
 <section id="references" class="pad-top-s pad-section">
-  <h2 class="text-center">References</h2>
+  <h2 class="text-center editable">References</h2>
    <!-- this is the container for the testimonials which should cycle through like a gallery -->
    <div class="grid-middle">
      <div class="col-1">
@@ -139,7 +139,7 @@ testimonials:
        <a id="flex-right" href="#"><i class="fa fa-angle-right nudge-right" aria-hidden="true"></i></a>
      </div>
      <div class="text-center pad-bottom-m">
-       <h4 class="pad-bottom-xs">Read other reviews and connect with Your Thai VA on…</h4>
+       <h4 class="pad-bottom-xs editable">Read other reviews and connect with Your Thai VA on…</h4>
        <div class="grid-center">
          <a class="col-3" href="https://th.linkedin.com/in/pang-wichiantiab-0739a7131" target=blank><img src="/images/linkedin.png" alt="linked in logo"/></a>
        </div>
@@ -148,7 +148,7 @@ testimonials:
 </section>
 <section id="contact" class="bg-contact grid-center" stlye="height: 70vh;">
   <div class="col-6_sm-8 pad-bottom-m">
-    <h2 class="text-pink text-center pad-top-s pad-bottom-s">Contact</h2>
+    <h2 class="text-pink text-center pad-top-s pad-bottom-s editable">Contact</h2>
     <form method="POST" action="https://formspree.io/YOUREMAILHERE">
       <input type="name" name="name" placeholder="Your Name">
       <input type="email" name="email" placeholder="Your email">
@@ -156,5 +156,4 @@ testimonials:
       <button type="submit" class="button-contact">Send</button>
     </form>
   </div>
-
 </section>
