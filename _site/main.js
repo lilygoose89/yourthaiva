@@ -1,16 +1,19 @@
-$('.pop-up').hide(0);
-$('.pop-up-container').hide(0);
+$("#trans").click(function(){
+  $("#transModal").addClass("show");
+});
+$("#admin").click(function(){
+  $("#adminModal").addClass("show");
+});
+$("#setup").click(function(){
+  $("#setupModal").addClass("show");
+});
+$("#sm").click(function(){
+  $("#smModal").addClass("show");
+});
+$(".modal").click(function(){
+  $(".modal").removeClass("show");
+});
 
-$('.pop-up-button').click(function(){
-  $('.pop-up-container').show(0);
-  $('.pop-up').fadeIn(300);
-  $('.pop-up-button').hide(0);
-});
-$('.pop-up span').click(function() {
-  $('.pop-up-container').hide(0);
-  $('.pop-up').hide(0);
-  $('.pop-up-button').show(0);
-});
 
 // Assign flexslider function to class .flexslider
 $('.flexslider').flexslider({

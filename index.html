@@ -6,16 +6,20 @@ headshot_image: /images/PangWichiantiab.jpg
 services:
   - bg: bg-trans
     name: Translation & Interpretation
-    description: >-
+    id: trans
+    description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
   - bg: bg-admin
     name: Administration
-    description: >-
+    id: admin
+    description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
   - bg: bg-setup
     name: Business Setup
-    description: >-
+    id: setup
+    description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
   - bg: bg-sm
     name: Social Media Management
-    description: >-
+    id: sm
+    description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 testimonials:
   - quote: >-
       Having somebody I can rely on when I've got too much on my plate helps me to focus on what I do best - provising great service to my own clients. I know I can trust Pang to take of the day to day work that would otherwise overwhelm my focus. I'm lucky to have stumbled upon somebody so thoughtful and professional.
@@ -77,22 +81,16 @@ testimonials:
     <div class="col-4_sm-12 margin-all-xs {{services.bg}} services grid-middle-center-noGutter">
       <div class="col-12">
         <h4 class="pad-bottom-xs">{{services.name}}</h4>
-        <button class="button-service">Learn More</button>
+        <button id="{{services.id}}" class="button-service">Learn More</button>
       </div>
     </div>
-    <!-- copied over pop-up -->
-    <!-- <div>
-      <div class="pop-up">
-        <span>x</span>
-          <div class="pop-up-text">
-            <h1>Heading 1</h1>
-            <p>Some sample pop-up text.</p>
-            <img src="https://images.unsplash.com/photo-1474244707578-17999c7d3fc4"/>
-          </div>
-        </div>
-      <div class="pop-up-container">
+    <div id="{{services.id}}Modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3 class="text-center pad-bottom-s">{{services.name}}</h3>
+        <p class="text-center-mobile">{{services.description}}</p>
       </div>
-    </div> -->
+    </div>
     {% endfor%}
   </div>
   <div class="text-center pad-bottom-m grid-center">
