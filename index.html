@@ -7,24 +7,47 @@ services:
   - bg: bg-trans
     name: Translation & Interpretation
     id: trans
-    description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    description: >-
+      I have many years of experience in translating and interpretation which
+      results in a smooth and clear communication. From translating blockbuster
+      movies for Netflix to handling legal documents and contracts. I have a
+      wide range of interpersonal communication skills and deep understanding of
+      English and Thai language. This means I not only translate word for word
+      but I know how to deal with people in every situation. Here are some
+      examples of what I can do for you:
   - bg: bg-admin
     name: Administration
     id: admin
-    description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    description: >-
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat.
   - bg: bg-setup
     name: Business Setup
     id: setup
-    description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    description: >-
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat.
   - bg: bg-sm
     name: Social Media Management
     id: sm
-    description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    description: >-
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat.
 testimonials:
   - quote: >-
-      Having somebody I can rely on when I've got too much on my plate helps me to focus on what I do best - provising great service to my own clients. I know I can trust Pang to take of the day to day work that would otherwise overwhelm my focus. I'm lucky to have stumbled upon somebody so thoughtful and professional.
+      Having somebody I can rely on when I've got too much on my plate helps me
+      to focus on what I do best - provising great service to my own clients. I
+      know I can trust Pang to take of the day to day work that would otherwise
+      overwhelm my focus. I'm lucky to have stumbled upon somebody so thoughtful
+      and professional.
     headline: Pang has been a huge help to my business!
-    client: Lily Bruns, Chiang Mai
+    client: 'Lily Bruns, Chiang Mai'
     testimonials_image: /images/lilyb&w.jpg
   - quote: >-
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -48,13 +71,14 @@ testimonials:
     client: Happy Client 4
     testimonials_image: /images/lilyb&w.jpg
 ---
+
 <header id="header" class="bg-header pad-section text-center pad-all-m">
   <div class="mobile-logo-container">
-    <img src="/images/yourthaiva-logo.png" alt="your thai va logo" class="logo"/>
+    <img src="/images/yourthaiva-logo.png" alt="your thai va logo" class="logo" />
   </div>
   <h2 class="text-white pad-all-s pad-top-m editable">Local help for your peace of mind</h2>
   <p class="text-white pad-bottom-xs editable">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    If you are a foreigner who is planning to open a business in Thailand you will quickly notice the language and culture barrier which easily can cause miscommunication. It&rsquo;s important to know how to talk and negotiate with Thai people to ensure a successful business relationship.<br />You will also realize it is difficult to find the correct information about the rules in Thailand.&nbsp; This is mainly because the laws change so fast and it&rsquo;s not easy to find the latest updates. We are here to make sure that you won&rsquo;t experience any unexpected costs or setbacks and that everything runs smoothly.
   </p>
   <div class="pad-all-xs">
     <a href="#contact"><button class="button-left"><span class="editable">Hire Me</span></button></a>
@@ -64,7 +88,7 @@ testimonials:
 <section id="about" class="pad-section text-center-mobile">
   <div class="grid pad-top-m pad-bottom-s">
     <div class="col-6_sm-12 text-right text-center-mobile pang">
-      <img src="{{page.headshot_image}}" alt="Pang Wichiantiab - Headshot"/>
+      <img src="{{page.headshot_image}}" alt="Pang Wichiantiab - Headshot" />
     </div>
     <div class="col-6_sm-12">
       <h2 class="pad-bottom-xs editable">About Me</h2>
@@ -118,7 +142,7 @@ testimonials:
              <div class="grid-center">
                <h3 class="col-12 text-center"><span class="text-purple quote">"</span>{{testimonials.headline}}</h3>
                <div class="col-3_sm-12 text-center">
-                 <img class="testimonials-image" src="{{testimonials.testimonials_image}}" alt="client testimonial image - {{testimonials.client}}"/>
+                 <img class="testimonials-image" src="{{testimonials.testimonials_image}}" alt="client testimonial image - {{testimonials.client}}" />
                </div>
                <div class="col-8_sm-12">
                  <blockquote>{{testimonials.quote}}</blockquote>
@@ -139,7 +163,7 @@ testimonials:
      <div class="text-center pad-bottom-m">
        <h4 class="pad-bottom-xs editable">Read other reviews and connect with Your Thai VA on…</h4>
        <div class="grid-center">
-         <a class="col-3" href="https://th.linkedin.com/in/pang-wichiantiab-0739a7131" target=blank><img src="/images/linkedin.png" alt="linked in logo"/></a>
+         <a class="col-3" href="https://th.linkedin.com/in/pang-wichiantiab-0739a7131" target=blank><img src="/images/linkedin.png" alt="linked in logo" /></a>
        </div>
      </div>
    </div>
@@ -148,8 +172,8 @@ testimonials:
   <div class="col-6_sm-8 pad-top-xs pad-bottom-m">
     <h2 class="text-pink text-center pad-top-s pad-bottom-s editable">Contact</h2>
     <form method="POST" action="https://formspree.io/p.wichiantiab@gmail.com">
-      <input type="name" name="name" placeholder="Your Name">
-      <input type="email" name="email" placeholder="Your email">
+      <input type="name" name="name" placeholder="Your Name" />
+      <input type="email" name="email" placeholder="Your email" />
       <textarea name="message" placeholder="Your message"></textarea>
       <button type="submit" class="button-contact">Send</button>
     </form>
