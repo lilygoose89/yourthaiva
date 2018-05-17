@@ -31,7 +31,15 @@ img {
 }
 
 /* typography ----------------------------------------- */
-h1,h2 {
+h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1em;
+  color: white !important;
+  line-height: 0;
+  margin: 0;
+}
+
+h2 {
   font-family: 'Oswald', sans-serif;
   color: #ef767a;
   font-size: 2em;
@@ -81,8 +89,11 @@ header p {
   color: #3a426d;
 }
 @media all and (max-width:768px) {
+  .page-title {
+    display: none;
+  }
   header h2 {
-    font-size: 2em;
+    font-size: 1.8em;
   }
   header p {
     font-size: 1em;
@@ -92,6 +103,9 @@ header p {
   }
 }
 @media all and (max-width:576px) {
+  header h2 {
+    font-size: 1.5em;
+  }
   h4 {
     font-size: 1.5em;
   }
@@ -278,7 +292,7 @@ nav a:hover {
 }
 @media all and (max-width:880px) {
   .testimonials-image {
-    top: -20px;
+    top: -10px;
   }
 }
 #flex-left,#flex-right {
